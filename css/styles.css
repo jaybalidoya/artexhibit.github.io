@@ -239,42 +239,9 @@ display: table;
 clear: both;
 }
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column2 {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-  margin-left: 20vh;
-}
 
-/* Clear floats after image containers */
-.row2::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
-.row2 {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  padding: 10px;
-  position: relative;
-}
 
-.column2 {
-float: left;
-width: 33.33%;
-padding: 10px;
-height: 230px; 
-text-align: center;
-color: white;
-}
-
-.row2:after {
-content: "";
-display: table;
-clear: both;
-}
 
 
 /* ----------------------------- */
