@@ -110,9 +110,105 @@ body {
     
 }
 
+.icon-scroll {
+	position: absolute;
+  margin-top: 10vh;
+	top: 50%;
+	left: 50%;
+  width: 1em;
+	height: 3.125em;
+	transform: translateX(-50%) scale(2);
+	z-index: 99999;
+}
+
+.icon-arrows::after,
+.icon-arrows::before {
+  content: '';
+}
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
+	display: block;
+	width: 0.315em;
+	height: 0.315em;
+	border-right: 1px solid rgba(255,255,255,.8);
+	border-bottom: 1px solid rgba(255,255,255,.8);
+	margin: 0 0 0.125em 0.315em;
+	transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+	animation-direction: alternate;
+}
+
+.icon-arrows::before {
+	margin-top: 0.315em;
+	animation-delay: .1s;
+}
+
+.icon-scroll span {
+	animation-delay: .2s;
+}
+
+.icon-arrows::after {
+	animation-delay: .3s;
+}
+
+.icon-scroll .mouse {
+	height: 1.375em;
+	width: .875em;
+	border: 1px solid rgba(255, 0, 0, 0.8);
+	border-radius: 2em;
+}
+
+.icon-scroll .wheel {
+  position: relative;
+  display: block;
+  height: 0.1875em;
+  width: 0.1875em;
+  margin: 0.1875em auto 0;
+  background: rgba(255,255,255,.8);
+  animation: mouse-wheel 1.2s ease infinite;
+  border-radius: 50%;
+}
+
+@keyframes mouse-wheel {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(.375em);
+	}
+}
+
+@keyframes mouse-scroll {
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
+}
+
+
+
+
+body {
+  background: #714A87;
+  color: #FFF;
+  color: rgba(255,255,255,.6);
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  padding-top: 2em;
+  font-weight: lighter;
+}
+a {
+  color: inherit;
+}
+
 #background-video {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     object-fit: cover;
     position: fixed;
     left: 0;
@@ -134,19 +230,23 @@ div.example {
     color: #003bbb;
     text-align: center;
     padding: 20px;
-    margin-top: 45vh; 
+    margin-top: 35vh; 
   }
 
-  div.example2 {
+ div.example2 {
     color: #003bbb;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     margin-top: 0vh; 
-  }
+ }
 
 @media screen and (min-width: 601px) {
     div.example {
       font-size: 80px;
+    }
+
+    div.example2 {
+      font-size: 40px;
     }
     
     div.message {
@@ -161,12 +261,108 @@ div.example {
     }
   }
 
+  .icon-scroll {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  width: 1em;
+	height: 3.125em;
+	transform: translateX(-50%) scale(2);
+	z-index: 99999;
+}
+
+.icon-arrows::after,
+.icon-arrows::before {
+  content: '';
+}
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
+	display: block;
+	width: 0.315em;
+	height: 0.315em;
+	border-right: 1px solid rgba(255,255,255,.8);
+	border-bottom: 1px solid rgba(255,255,255,.8);
+	margin: 0 0 0.125em 0.315em;
+	transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+	animation-direction: alternate;
+}
+
+.icon-arrows::before {
+	margin-top: 0.315em;
+	animation-delay: .1s;
+}
+
+.icon-scroll span {
+	animation-delay: .2s;
+}
+
+.icon-arrows::after {
+	animation-delay: .3s;
+}
+
+.icon-scroll .mouse {
+	height: 1.375em;
+	width: .875em;
+	border: 1px solid rgba(255,255,255,.8);
+	border-radius: 2em;
+}
+
+.icon-scroll .wheel {
+  position: relative;
+  display: block;
+  height: 0.1875em;
+  width: 0.1875em;
+  margin: 0.1875em auto 0;
+  background: rgba(255,255,255,.8);
+  animation: mouse-wheel 1.2s ease infinite;
+  border-radius: 50%;
+}
+
+@keyframes mouse-wheel {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(.375em);
+	}
+}
+
+@keyframes mouse-scroll {
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
+}
+
+
+
+
+body {
+  background: #714A87;
+  color: #FFF;
+  color: rgba(255,255,255,.6);
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  padding-top: 2em;
+  font-weight: lighter;
+}
+a {
+  color: inherit;
+}
+
   main {
     background-color: #f478bf;
-    margin-top: 50vh;
-    padding: 10px;
+    margin-top: 25vh;
+    padding: 20px;
     position: relative;
   }
+  
 
   div.home-about {
     font-size: 50px;
